@@ -1,6 +1,6 @@
 <nav aria-label="pagination py-8">
     <ul class="flex justify-between">
-      <li class="py-4 text-xl font-medium text-blue-600">
+      <li class="py-4 text-xl font-medium text-blue-500 hover:text-blue-700" [class.no-hover]="current_page === 1" [ngClass]="{disable: current_page === 1}">
         <button
           aria-label="Go To Previous Page"
           [attr.aria-disabled]="current_page === 1"
@@ -11,21 +11,8 @@
           Previous
         </button>
       </li>
-      <!-- <li *ngFor="let page of pages;">
-        <a
-          [attr.aria-current]="page === current_page ? 'page' : null"
-          [attr.aria-label]="
-            page === current_page ? 'Current Page, Page ' + page : 'Go to Page ' + page
-          "
-          [class.current]="page === current_page"
-          tabindex="0"
-          (click)="onGoTo(page)"
-          (keyup.enter)="onGoTo(page)"
-          >
-  {{ page }}</a
-        >
-      </li> -->
-      <li class="py-4 text-xl font-medium text-blue-600" [ngClass]="{disable: current_page === total_pages}">
+      
+      <li class="py-4 text-xl font-medium text-blue-500 hover:text-blue-700 cursor-pointer"  [class.no-hover]="current_page === total_pages" [ngClass]="{disable: current_page === total_pages}">
         <button class=''
           aria-label="Go To Next Page"
           [attr.aria-disabled]="current_page === total_pages"
