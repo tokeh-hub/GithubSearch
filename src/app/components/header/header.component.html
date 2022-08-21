@@ -1,0 +1,4 @@
+<div [class.header-light]="light" [class.header-dark]="!light" class="flex justify-between mb-7 text-xl">
+    <h2 class="font-bold tracking-widest text-xl">Github User Search</h2>
+    <p class="uppercase" (click)="switchTheme()">{{light ? 'Light' : 'Dark'}}<fa-icon class="ml-4" [icon]="light? faSun : faMoon"></fa-icon></p>
+</div>

@@ -1,0 +1,47 @@
+<div class="w-full h-fit py-8 px-5 md:px-14 bg-white rounded-lg shadow-lg">
+    <div class="flex items-center">
+        <div class="h-24 w-24 md:w-40 md:h-40">
+            <img class="w-full h-full rounded-full" src={{image_url}}>
+        </div>
+        <div class="ml-8 md:ml-16">
+            <h1 class="text-2xl font-bold text-slate-500 md:pb-4">{{username}}</h1>
+            <p class="text-base text-slate-500">{{description}}</p>
+        </div>
+    </div>
+    <div class="bg-cyan-100 rounded-md h-fit pt-5 md:pt-10 md:pb-2 flex mt-6 items-center justify-between px-5 md:px-16">
+        <div >
+            <p class="text-blue-400 text-base font-light">Repo</p>
+            <p class="text-black font-bold text-2xl">{{repos}}</p>
+        </div>
+        <div>
+            <p class="text-blue-400 text-base font-light">Followers</p>
+            <p class="text-black font-bold text-2xl">{{followers}}</p>
+        </div>
+        <div>
+            <p class="text-blue-400 text-base font-light">Following</p>
+            <p class="text-black font-bold text-2xl">{{following}}</p>
+        </div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 pt-10">
+        <div class="flex my-2">
+            <fa-icon class="text-slate-500 text-xl font-light mr-5" [icon]="faLocation"></fa-icon>
+            <p class="text-base text-slate-500">{{location}}</p>
+        </div>
+        <div class="flex my-2">
+            <fa-icon class="text-slate-500 text-xl font-light mr-5" [icon]="faLink"></fa-icon>
+            <a class="text-base text-slate-500" href={blog}>{{blog}}</a>
+        </div>
+        <div class="flex my-2">
+            <fa-icon class="text-slate-500 text-xl font-light mr-5" [icon]="faTwitter"></fa-icon>
+            <a class="text-base text-slate-500" href={twitter}>{{twitter}}</a>
+        </div>
+        <div class="flex my-2">
+            <fa-icon class="text-slate-500 text-xl font-light mr-5" [icon]="faMail"></fa-icon>
+            <a class="text-base text-slate-500" href={email}>{{email}}</a>
+        </div>
+        
+    </div>
+   
+
+</div>
