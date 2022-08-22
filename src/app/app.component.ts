@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from './services/ui.service';
-import { Router } from '@angular/router';
-import { User } from 'user';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,4 +16,6 @@ export class AppComponent implements OnInit {
       this.light = val;
     });
   }
+
+  
 }

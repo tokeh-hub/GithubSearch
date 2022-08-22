@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: SearchcontainerComponent },
   { path: 'users', component: UsersComponent },
   { path: 'info', component: SearchinfoComponent },
+  { path: 'home', component: SearchcontainerComponent },
 ];
 
 @NgModule({
