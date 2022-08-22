@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationComponent } from './pagination.component';
-
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [
-    PaginationComponent
-  ],
+  declarations: [PaginationComponent],
   exports: [PaginationComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule, FontAwesomeModule],
 })
-export class PaginationModule { }
+export class PaginationModule {}

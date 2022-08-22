@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
-import { ContentComponent } from './components/content/content.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonComponent } from './components/button/button.component';
 import { UsersComponent } from './components/users/users.component';
@@ -22,7 +21,6 @@ import { PaginationModule } from './pagination/pagination.module';
     AppComponent,
     HeaderComponent,
     SearchComponent,
-    ContentComponent,
     ButtonComponent,
     UsersComponent,
     SearchcontainerComponent,

@@ -3,17 +3,15 @@ import { User } from 'user';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
   @Input() user: User;
-  @Output() onSearchInfo : EventEmitter<string> = new EventEmitter()
-  constructor() { }
+  @Output() onSearchInfo: EventEmitter<string> = new EventEmitter();
+  constructor() {}
 
-  onClick(user: string){
-      this.onSearchInfo.emit(user)
+  onClick(user: string) {
+    this.onSearchInfo.emit(user);
   }
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

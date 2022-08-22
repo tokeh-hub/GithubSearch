@@ -1,119 +1,118 @@
 import { Injectable } from '@angular/core';
-import {Observable, BehaviorSubject} from "rxjs"
+import { Observable, BehaviorSubject } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UiService {
- light: boolean
- private subject = new BehaviorSubject<any[]>([]);
- private nameSubject = new BehaviorSubject<string>('');
- private emailSubject = new BehaviorSubject<string>('');
- private twitterSubject = new BehaviorSubject<string>('');
- private locationSubject = new BehaviorSubject<string>('');
- private descriptionSubject = new BehaviorSubject<string>('');
- private followersSubject = new BehaviorSubject<number>(0);
- private followingSubject = new BehaviorSubject<number>(0);
- private reposSubject = new BehaviorSubject<number>(0);
- private blogSubject = new BehaviorSubject<string>('');
- private imageSubject = new BehaviorSubject<string>('');
- private text = new BehaviorSubject<string>('');
- private lightSubject = new BehaviorSubject<boolean>(false)
+  light: boolean;
+  private subject = new BehaviorSubject<any[]>([]);
+  private nameSubject = new BehaviorSubject<string>('');
+  private emailSubject = new BehaviorSubject<string>('');
+  private twitterSubject = new BehaviorSubject<string>('');
+  private locationSubject = new BehaviorSubject<string>('');
+  private descriptionSubject = new BehaviorSubject<string>('');
+  private followersSubject = new BehaviorSubject<number>(0);
+  private followingSubject = new BehaviorSubject<number>(0);
+  private reposSubject = new BehaviorSubject<number>(0);
+  private blogSubject = new BehaviorSubject<string>('');
+  private imageSubject = new BehaviorSubject<string>('');
+  private text = new BehaviorSubject<string>('');
+  private lightSubject = new BehaviorSubject<boolean>(false);
 
-  
-  sendLight(light:boolean)  {
-    this.lightSubject.next(light)
-  }   
-
-  getLight() : Observable<boolean> {
-    return this.lightSubject.asObservable()
+  sendLight(light: boolean) {
+    this.lightSubject.next(light);
   }
 
-  sendText(str: string)  {
-    this.text.next(str)
-  }   
-
-  getText() : Observable<string> {
-    return this.text.asObservable()
+  getLight(): Observable<boolean> {
+    return this.lightSubject.asObservable();
   }
 
-  sendValue(obj:any){
-    this.subject.next(obj)
+  sendText(str: string) {
+    this.text.next(str);
   }
 
-  sendName(name: string){
-    this.nameSubject.next(name)
+  getText(): Observable<string> {
+    return this.text.asObservable();
   }
 
-  getName() : Observable<any> {
-    return this.nameSubject.asObservable()
+  sendValue(obj: any) {
+    this.subject.next(obj);
   }
 
-  sendEmail(email: string){
-    this.emailSubject.next(email)
+  sendName(name: string) {
+    this.nameSubject.next(name);
   }
 
-  getEmail() : Observable<any> {
-    return this.emailSubject.asObservable()
+  getName(): Observable<any> {
+    return this.nameSubject.asObservable();
   }
 
-  sendFollowers(followers: number){
-    this.followersSubject.next(followers)
+  sendEmail(email: string) {
+    this.emailSubject.next(email);
   }
 
-  getFollowers() : Observable<any> {
-    return this.followersSubject.asObservable()
-  }
-  sendFollowing(following: number){
-    this.followingSubject.next(following)
+  getEmail(): Observable<any> {
+    return this.emailSubject.asObservable();
   }
 
-  getFollowing() : Observable<any> {
-    return this.followingSubject.asObservable()
-  }
-  sendRepos(repos: number){
-    this.reposSubject.next(repos)
+  sendFollowers(followers: number) {
+    this.followersSubject.next(followers);
   }
 
-  getRepos() : Observable<any> {
-    return this.reposSubject.asObservable()
+  getFollowers(): Observable<any> {
+    return this.followersSubject.asObservable();
   }
-  sendLocation(location: string){
-    this.locationSubject.next(location)
-  }
-
-  getLocation() : Observable<any> {
-    return this.locationSubject.asObservable()
-  }
-  sendTwitter(twitter: string){
-    this.twitterSubject.next(twitter)
+  sendFollowing(following: number) {
+    this.followingSubject.next(following);
   }
 
-  getTwitter() : Observable<any> {
-    return this.twitterSubject.asObservable()
+  getFollowing(): Observable<any> {
+    return this.followingSubject.asObservable();
   }
-  sendDescription(description: string){
-    this.descriptionSubject.next(description)
-  }
-
-  getDescription() : Observable<any> {
-    return this.descriptionSubject.asObservable()
-  }
-  sendBlog(blog: string){
-    this.blogSubject.next(blog)
+  sendRepos(repos: number) {
+    this.reposSubject.next(repos);
   }
 
-  getBlog() : Observable<any> {
-    return this.blogSubject.asObservable()
+  getRepos(): Observable<any> {
+    return this.reposSubject.asObservable();
   }
-  sendImage(image: string){
-    this.imageSubject.next(image)
+  sendLocation(location: string) {
+    this.locationSubject.next(location);
   }
 
-  getImage() : Observable<any> {
-    return this.imageSubject.asObservable()
+  getLocation(): Observable<any> {
+    return this.locationSubject.asObservable();
+  }
+  sendTwitter(twitter: string) {
+    this.twitterSubject.next(twitter);
+  }
+
+  getTwitter(): Observable<any> {
+    return this.twitterSubject.asObservable();
+  }
+  sendDescription(description: string) {
+    this.descriptionSubject.next(description);
+  }
+
+  getDescription(): Observable<any> {
+    return this.descriptionSubject.asObservable();
+  }
+  sendBlog(blog: string) {
+    this.blogSubject.next(blog);
+  }
+
+  getBlog(): Observable<any> {
+    return this.blogSubject.asObservable();
+  }
+  sendImage(image: string) {
+    this.imageSubject.next(image);
+  }
+
+  getImage(): Observable<any> {
+    return this.imageSubject.asObservable();
   }
 
   getValue(): Observable<any> {
-        return this.subject.asObservable()
+    return this.subject.asObservable();
   }
 }

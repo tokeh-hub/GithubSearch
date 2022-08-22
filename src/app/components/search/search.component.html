@@ -1,7 +1,23 @@
-<form class=""  (ngSubmit)="onSubmit()">
-    <div [class.search-light]="light" [class.search-dark]="!light" class="border border-slate-400 rounded-md flex items-center pl-1 relative py-5">
-    <p class="absolute left-4 top-5"><fa-icon class="text-xl" [icon]="faSearch"></fa-icon></p>
-    <input class="w-4/6 ml-10 bg-transparent text-white text-xl outline-none border-none focus:outline-none focus:bg-transparent placeholder:text-lg sm:placeholder:text-xl" type="text" name="text" placeholder="Search Github username..."  [(ngModel)]="text">
-    <input type="submit" value="Search"  class="absolute right-4 bg-blue-600 text-sm py-2 px-4 rounded-md text-white text-base font-medium">
-    </div>
+<form class="" (ngSubmit)="onSubmit()">
+  <div
+    [class.search-light]="light"
+    [class.search-dark]="!light"
+    class="border border-slate-400 rounded-md flex items-center pl-1 relative py-5"
+  >
+    <p class="absolute left-4 top-5">
+      <fa-icon class="text-xl" [icon]="faSearch"></fa-icon>
+    </p>
+    <input
+      class="w-1/2 sm:w-4/6 ml-10 bg-transparent text-white text-xl outline-none border-none focus:outline-none focus:bg-transparent placeholder:text-sm sm:placeholder:text-xl"
+      type="text"
+      name="text"
+      placeholder="Search Github username..."
+      [(ngModel)]="text"
+    />
+    <input
+      type="submit"
+      value="Search"
+      class="absolute right-4 bg-blue-600 text-sm py-2 px-4 rounded-md text-white text-base font-medium"
+    />
+  </div>
 </form>

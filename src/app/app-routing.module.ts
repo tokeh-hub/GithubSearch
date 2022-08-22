@@ -4,13 +4,13 @@ import { SearchcontainerComponent } from './components/searchcontainer/searchcon
 import { UsersComponent } from './components/users/users.component';
 import { SearchinfoComponent } from './components/searchinfo/searchinfo.component';
 const routes: Routes = [
-  {path:'',component:SearchcontainerComponent},
-  {path:'users',component:UsersComponent},
-  {path:'info',component:SearchinfoComponent}
+  { path: '', component: SearchcontainerComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'info', component: SearchinfoComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

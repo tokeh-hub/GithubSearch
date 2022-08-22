@@ -1,26 +1,34 @@
 <nav aria-label="pagination py-8">
-    <ul class="flex justify-between">
-      <li class="py-4 text-xl font-medium text-blue-500 hover:text-blue-700" [class.no-hover]="current_page === 1" [ngClass]="{disable: current_page === 1}">
-        <button
-          aria-label="Go To Previous Page"
-          [attr.aria-disabled]="current_page === 1"
-          [disabled]="current_page === 1"
-          (click)="onPrevious()"
-          
-        >
-          Previous
-        </button>
-      </li>
-      
-      <li class="py-4 text-xl font-medium text-blue-500 hover:text-blue-700 cursor-pointer"  [class.no-hover]="current_page === total_pages" [ngClass]="{disable: current_page === total_pages}">
-        <button class=''
-          aria-label="Go To Next Page"
-          [attr.aria-disabled]="current_page === total_pages"
-          [disabled]="current_page === total_pages"
-          (click)="onNext()"
-        >
-          Next
-        </button>
-      </li>
-      
-    </ul>
+  <ul class="flex justify-between">
+    <li
+      class="py-4 text-xl font-medium text-blue-500 hover:text-blue-700"
+      [class.no-hover]="current_page === 1"
+      [ngClass]="{ disable: current_page === 1 }"
+    >
+      <button
+        aria-label="Go To Previous Page"
+        [attr.aria-disabled]="current_page === 1"
+        [disabled]="current_page === 1"
+        (click)="onPrevious()"
+      >
+        <fa-icon class="mr-3" [icon]="faArrowLeft"></fa-icon>Previous
+      </button>
+    </li>
+
+    <li
+      class="py-4 text-xl text-blue-500 hover:text-blue-700 cursor-pointer flex"
+      [class.no-hover]="current_page === total_pages"
+      [ngClass]="{ disable: current_page === total_pages }"
+    >
+      <button
+        class=""
+        aria-label="Go To Next Page"
+        [attr.aria-disabled]="current_page === total_pages"
+        [disabled]="current_page === total_pages"
+        (click)="onNext()"
+      >
+        Next <fa-icon class="ml-3" [icon]="faArrowRight"></fa-icon>
+      </button>
+    </li>
+  </ul>
+</nav>

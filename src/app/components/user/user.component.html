@@ -1,13 +1,20 @@
 <div class="pb-6 text-slate-500">
-    <div class="flex flex-wrap justify-between items-center pb-2 px-2">
-        <div class="flex items-center">
-            <img class="w-12 h-12 rounded-full mr-4" src={{user.avatar_url}}>
-            <p class="hover:underline text-lg font-medium cursor-pointer hover:text-blue-400 "  (click)="onClick(user.login)">{{user.login}}</p>
-        </div>
-       
-        <a class="text-md border border-slate-300 px-1 py-0.5 rounded-md cursor-pointer hover:bg-blue-400 hover:text-white" href={{user.html_url}}>Go to Github</a>
+  <div class="flex flex-wrap justify-between items-center pb-2 px-2">
+    <div class="flex items-center">
+      <img class="w-12 h-12 rounded-full mr-4" src="{{ user.avatar_url }}" />
+      <p
+        class="hover:underline text-lg font-medium cursor-pointer hover:text-blue-400"
+        (click)="onClick(user.login)"
+      >
+        {{ user.login }}
+      </p>
     </div>
-   <hr class="text-slate-100">
+
+    <a
+      class="text-md border border-slate-300 px-1 py-0.5 rounded-md cursor-pointer hover:bg-blue-400 hover:text-white"
+      href="{{ user.html_url }}"
+      >Go to Github</a
+    >
+  </div>
+  <hr class="text-slate-100" />
 </div>
-
-
