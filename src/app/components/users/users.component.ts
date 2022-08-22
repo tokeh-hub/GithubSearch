@@ -58,7 +58,7 @@ export class UsersComponent implements OnDestroy, OnInit {
   searchInfo(login: string) {
     this.searchService.getUserInfo(login).subscribe((val) => {
       this.uiService.sendName(val.name ? val.name : val.login);
-      this.uiService.sendBlog(val.blog ? val.blog : 'This profile has no blog');
+      this.uiService.sendBlog(val.blog ? val.blog : 'Nil');
       this.uiService.sendFollowers(val.followers);
       this.uiService.sendFollowing(val.following);
       this.uiService.sendImage(val.avatar_url);

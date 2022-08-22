@@ -31,40 +31,33 @@
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faLocation"
       ></fa-icon>
-      {{location === 'Nil' ?
-      <p>{{ location }}</p>
-      : <a class="text-base text-slate-500" href="{location}">{{ location }}</a
-      >}}
+      <p>{{location}}</p>
     </div>
+
     <div class="flex my-2">
       <fa-icon
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faLink"
       ></fa-icon>
-      {{blog === 'This profile has no blog' ?
-      <p>{{ blog }}</p>
-      : <a class="text-base text-slate-500" href="{blog}">{{ blog }}</a
-      >}}
+      <p *ngIf="blog === 'Nil'">{{blog}}</p>
+      <a href="{{blog}}" target="_blank" *ngIf="blog !== 'Nil'">{{blog}}</a>
     </div>
+
     <div class="flex my-2">
       <fa-icon
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faTwitter"
       ></fa-icon>
-      {{twitter === 'Nil' ?
-      <p>{{ twitter }}</p>
-      : <a class="text-base text-slate-500" href="{twitter}">{{ twitter }}</a
-      >}}
+      <p *ngIf="twitter === 'Nil'">{{twitter}}</p>
+      <a href="{{twitter}}" target="_blank" *ngIf="twitter !== 'Nil'">{{twitter}}</a>
     </div>
+
     <div class="flex my-2">
       <fa-icon
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faMail"
       ></fa-icon>
-      {{email === 'Nil' ?
-      <p>{{ email }}</p>
-      : <a class="text-base text-slate-500" href="{email}">{{ email }}</a
-      >}}
-    </div>
+      <p *ngIf="email === 'Nil'">{{email}}</p>
+      <a href="{{email}}" target="_blank" *ngIf="email !== 'Nil'">{{email}}</a>
   </div>
 </div>
