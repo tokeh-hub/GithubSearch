@@ -39,8 +39,7 @@
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faLink"
       ></fa-icon>
-      <p *ngIf="blog === 'Nil'">{{blog}}</p>
-      <a href="{{blog}}" target="_blank" *ngIf="blog !== 'Nil'">{{blog}}</a>
+      <div [innerHTML]="renderTag(blog)"></div>
     </div>
 
     <div class="flex my-2">
@@ -48,8 +47,7 @@
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faTwitter"
       ></fa-icon>
-      <p *ngIf="twitter === 'Nil'">{{twitter}}</p>
-      <a href="{{twitter}}" target="_blank" *ngIf="twitter !== 'Nil'">{{twitter}}</a>
+      <div [innerHTML]="renderTag(twitter)"></div>
     </div>
 
     <div class="flex my-2">
@@ -57,7 +55,6 @@
         class="text-slate-500 text-xl font-light mr-5"
         [icon]="faMail"
       ></fa-icon>
-      <p *ngIf="email === 'Nil'">{{email}}</p>
-      <a href="{{email}}" target="_blank" *ngIf="email !== 'Nil'">{{email}}</a>
+      <div [innerHTML]="renderTag(email)"></div>
   </div>
 </div>

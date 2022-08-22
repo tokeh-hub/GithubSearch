@@ -67,6 +67,10 @@ export class SearchinfoComponent implements OnInit, OnDestroy {
     return Object.keys(obj);
   }
 
+  renderTag(event: string){
+    return event === "Nil" ? `<p>${event}</p>` : ` <a href="${event}" target="_blank">${event}</a>`
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
